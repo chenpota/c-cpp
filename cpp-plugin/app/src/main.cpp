@@ -35,7 +35,13 @@ int main()
 
     plugin->execute();
 
-    dlclose(dlHandle);
+    const int result = dlclose(dlHandle);
+
+    if(result != 0)
+    {
+        cerr << "dlclose error: " << dlerror() << endl;
+        exit(1);
+    }
 
     return 0;
 }
