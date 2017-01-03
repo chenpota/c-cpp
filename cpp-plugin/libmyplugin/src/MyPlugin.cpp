@@ -4,8 +4,6 @@
 
 namespace myplugin
 {
-    using libplugin::Plugin;
-
     using std::cout;
     using std::endl;
 
@@ -23,10 +21,12 @@ namespace myplugin
     {
         cout << "MyPlugin::do_execute()" << endl;
     }
+}
 
-    extern "C" Plugin *
+extern "C" {
+    libplugin::Plugin *
         create()
     {
-        return new MyPlugin();
+        return new myplugin::MyPlugin();
     }
 }

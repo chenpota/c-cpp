@@ -17,7 +17,9 @@ namespace myplugin
     };
 }
 
-extern "C" libplugin::Plugin *
-    create();
+extern "C" {
+    libplugin::Plugin *
+        create();
+}
 
 #endif
