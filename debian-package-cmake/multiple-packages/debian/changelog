@@ -1,0 +1,5 @@
+multiple-packages (0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #0001)
+
+ -- Tester <test@test.com>  Thu, 05 Jan 2017 10:43:59 +0800

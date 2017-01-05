@@ -1,0 +1,19 @@
+Source: multiple-packages
+Section: misc
+Priority: extra
+Maintainer: Tester <test@test.com>
+Build-Depends: debhelper (>=9), dh-exec (>=0.2)
+Standards-Version: 3.9.6
+
+Package: myprog
+Architecture: any
+Depends: libmyutil, ${shlibs:Depends}, ${misc:Depends}
+Description: PoTa Chen's example
+ PoTa Chen's example
+
+Package: libmyutil
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: PoTa Chen's example
+ PoTa Chen's example
