@@ -5,13 +5,7 @@ Maintainer: Tester <test@test.com>
 Build-Depends: debhelper (>=9), dh-exec (>=0.2)
 Standards-Version: 3.9.6
 
-Package: test
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: PoTa Chen's example
- PoTa Chen's example
-
-Package: dummy
+Package: myprogram
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: PoTa Chen's example
