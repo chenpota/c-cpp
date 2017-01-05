@@ -1,4 +1,4 @@
-Source: test
+Source: single-package
 Section: misc
 Priority: optional
 Maintainer: Tester <test@test.com>
