@@ -9,5 +9,5 @@ add_library(
     SHARED
     ${CMAKE_CURRENT_SOURCE_DIR}/Util.cpp)
 
-install(TARGET myutil
+install(TARGETS myutil
         LIBRARY DESTINATION lib)

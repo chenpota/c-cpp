@@ -16,5 +16,5 @@ target_link_libraries(
     myprog
     ${LIB})
 
-install(TARGET myprog
+install(TARGETS myprog
         RUNTIME DESTINATION bin)
