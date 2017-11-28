@@ -29,6 +29,13 @@ void
     {
         cout << "status: " << http::status(response) << endl;
         cout << "body: " << http::body(response) << endl;
+
+        auto &headers = response.headers();
+
+        for(auto header = headers.begin(); header != headers.end(); ++header)
+        {
+            cout << header->first << " = " << header->second << endl;
+        }
     }
     catch(...)
     {
