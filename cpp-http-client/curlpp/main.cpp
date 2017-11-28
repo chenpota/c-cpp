@@ -43,9 +43,11 @@ int main()
     }
     catch(curlpp::LogicError & e) {
         std::cout << e.what() << std::endl;
+        return 1;
     }
     catch(curlpp::RuntimeError & e) {
         std::cout << e.what() << std::endl;
+        return 1;
     }
 
     return 0;

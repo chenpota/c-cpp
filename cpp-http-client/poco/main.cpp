@@ -15,10 +15,10 @@ using namespace std;
 int main()
 {
     Poco::URI uri("http://localhost:11140/test/tag/ok");
+
     Poco::Net::HTTPClientSession session(
         uri.getHost(),
         uri.getPort());
-    session.setKeepAlive(false);
 
     string path(uri.getPathAndQuery());
     if(path.empty())
@@ -56,12 +56,14 @@ int main()
         const auto response = ss.str();
         cout << response << endl;
     }
-    catch(Poco::Net::ConnectionRefusedException)
+    catch(Poco::Net::ConnectionRefusedException ex)
     {
+        cout << ex.displayText() << endl;
         return 1;
     }
-    catch(Poco::Net::NetException)
+    catch(Poco::Net::NetException ex)
     {
+        cout << ex.displayText() << endl;
         return 1;
     }
 
