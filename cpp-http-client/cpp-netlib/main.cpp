@@ -45,7 +45,7 @@ void callback(
 
     if (!error)
     {
-        if(!boost::empty(range))
+        if(!boost::empty(range)) //BUG? callback more than one time
         {
             *text = string(range.begin(), range.end());
             io_service->stop();
