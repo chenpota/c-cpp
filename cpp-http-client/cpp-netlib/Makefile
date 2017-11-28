@@ -12,7 +12,7 @@ clean:
 .PHONY: setup
 setup:
 	apt-get update && \
-		apt-get -y install libssl-dev && \
+		apt-get -y install libssl-dev libboost-all-dev && \
 		wget http://downloads.cpp-netlib.org/0.11.2/cpp-netlib-0.11.2-final.tar.gz && \
 		tar -zxvf cpp-netlib-0.11.2-final.tar.gz && \
 		rm cpp-netlib-0.11.2-final.tar.gz && \
